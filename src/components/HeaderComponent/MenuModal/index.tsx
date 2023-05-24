@@ -1,4 +1,4 @@
-import useMenuContext from "../../hooks/useMenuContext";
+import useMenuContext from "../../../hooks/useMenuContext";
 import styles from "./index.module.css";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";

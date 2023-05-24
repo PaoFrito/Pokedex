@@ -1,9 +1,9 @@
 import logo from "../../assets/logo.svg";
-import { Container } from "../Container";
+import { Container } from "../../Container";
 import styles from "./index.module.css";
 import { AiOutlineMenu } from "react-icons/ai"
 import { MenuModal } from "../MenuModal";
-import useMenuContext from "../../hooks/useMenuContext";
+import useMenuContext from "../../../hooks/useMenuContext";
 import { Link } from "react-router-dom";
 
 export const Header = () => {

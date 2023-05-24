@@ -8,7 +8,7 @@ type ErrorResponse = {
     message?: string;
 };
 
-export default function ErrorPage() {
+export const ErrorPage = () => {
   const error = useRouteError() as ErrorResponse;
   console.error(error);
 

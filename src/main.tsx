@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
 import './index.module.css'
-import NotFound from './components/NotFound'
+import { ErrorPage } from './pages/NotFoundPage/index.tsx'
+import { PokedexPage } from './pages/PokedexPage/index.tsx'
+import { LegendariesPage } from './pages/LegendariesPage/index.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <NotFound/>
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: '/pokedex',
+    element: <PokedexPage />,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: '/legendaries',
+    element: <LegendariesPage />,
+    errorElement: <ErrorPage/>
   }
 ])
 

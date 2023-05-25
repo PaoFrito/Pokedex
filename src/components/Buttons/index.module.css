@@ -1,0 +1,25 @@
+button{
+    border-radius: 12px;
+    box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+    width: 231px;
+    height: 66px;
+    text-align: center;
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+}
+
+.success{
+    background-color: #73D677;
+}
+
+.warning{
+    background-color: #F2CB07;
+}
+
+@media (max-width:768px) {
+    button{
+        width: 80%;
+    }
+}

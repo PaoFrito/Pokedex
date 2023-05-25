@@ -14,7 +14,6 @@ const DEFAULT_VALUES = {
     isActiveState: false,
     setIsActiveState: () => false,
     switchBoll: () => undefined
-
 }
 
 const MenuContext = createContext<MenuContextProps>(DEFAULT_VALUES)

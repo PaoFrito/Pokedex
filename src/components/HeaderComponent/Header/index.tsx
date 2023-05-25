@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
 
-  const { switchBoll} = useMenuContext();
+  const { switchBoll } = useMenuContext();
 
   return (
     <header className={styles.header_background}>

@@ -7,8 +7,8 @@ export const FooterComponent = () => {
             <Container>
                 <div className={styles.footer_content}>
                     <h4>Make with ❤️ for the PokéSpartans team Platzi Master</h4>
-                    <h4>Ours Team</h4>
-                </div>
+                    <h4><b>Ours Team</b></h4>
+                </div>  
             </Container>
         </footer>
     );

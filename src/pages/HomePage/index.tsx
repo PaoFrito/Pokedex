@@ -1,12 +1,13 @@
 import { FooterComponent } from "../../components/FooterComponent";
 import { HeaderComponent } from "../../components/HeaderComponent";
-import styles from "../../index.module.css";
+import { HomeComponent } from "../../components/HomeComponent";
 
 export const HomePage = () => {
 
   return (
     <>
-      <HeaderComponent/>
+      <HeaderComponent />
+      <HomeComponent />
       <FooterComponent />
     </>
   );

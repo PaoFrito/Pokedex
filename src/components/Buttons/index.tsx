@@ -1,6 +1,5 @@
-import { redirect } from 'react-router-dom';
+import { Link, redirect } from 'react-router-dom';
 import styles from './index.module.css';
-
 
 type ButtonProps = {
     text: string;
@@ -10,10 +9,10 @@ type ButtonProps = {
 
 export const Button = ({ text, type, link }: ButtonProps) => {
     return (
-        <button
-            onClick={() => redirect(`${link}`)} 
-            className={type == "success" ? styles.success : styles.warning}>
-            {text}
-        </button>
+        <Link to={link}>
+            <button className={type == "success" ? styles.success : styles.warning}>
+                {text}
+            </button>
+        </Link>
     );
 };

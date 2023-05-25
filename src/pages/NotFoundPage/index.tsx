@@ -2,6 +2,7 @@ import { useRouteError } from "react-router-dom";
 import styles from "./index.module.css";
 
 type ErrorResponse = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data: any;
     status: number;
     statusText: string;

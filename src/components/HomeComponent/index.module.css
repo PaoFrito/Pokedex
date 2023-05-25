@@ -1,0 +1,45 @@
+.background{
+    height: calc(100vh - 80px);
+    background: linear-gradient(180deg, #f5db13 10%, #f2b807 100%) !important;
+    padding-bottom: 100px;
+}
+
+.main{
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    padding-top: 64px;
+    gap: 32px;
+}
+
+.main > h1{
+    font-weight: 400 !important;
+    font-family: Karla;
+    letter-spacing: 4px;
+    line-height: 84px;
+}
+
+.main > h1 > b{
+    font-weight: 700 !important;
+}
+
+.main > p{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+.img{
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    width: 600px;
+    height: auto;
+}

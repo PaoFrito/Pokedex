@@ -17,3 +17,9 @@ button{
 .warning{
     background-color: #F2CB07;
 }
+
+@media (max-width:768px) {
+    button{
+        width: 80%;
+    }
+}

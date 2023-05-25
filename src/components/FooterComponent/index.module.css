@@ -16,4 +16,22 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .footer_content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap:8px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .footer_content{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

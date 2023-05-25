@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 
 type StatusComponentProps = {
 	stat: number;
-	stat_name: string;
+	stat_name: "Attack" | "Defense" | "Sp Attack" | "Sp Defense";
 }
 
 export const StatusComponent = (status: StatusComponentProps) => {

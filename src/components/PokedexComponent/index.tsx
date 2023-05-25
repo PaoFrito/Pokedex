@@ -1,97 +1,91 @@
-import { useEffect } from 'react';
-import { pokemon_api } from '../../api/pokemon';
-import usePokedexContext from '../../hooks/usePokedexContext';
-import styles from './index.module.css';
-import PokemonApi, { Stat, TypeApi } from '../../models/pokemonApi';
+import { useEffect, useState } from 'react';
+import { getAllPokemons, getPokemonByName, getComplementaryPokemonDataByName } from '../../api/pokemon';
 import Pokemon from '../../models/pokemon';
-import { Type } from '../../models/type';
+import { PokemonCardContextProvider } from '../../contexts/pokemonCard';
+import { PokemonCardComponent } from '../PokemonCardComponent';
 
 export const PokedexComponent = () => {
 
-    const { pokemonState, setPokemonState } = usePokedexContext();
+  /* const [pokemonList, setPokemonList] = useState<Pokemon[]>(
+    [{
+      id: 0,
+      pokedex_id: 0,
+      name: "",
+      generation: "",
+      abilities: [],
+      exp: 0,
+      hp: 0,
+      atk: 0,
+      sp_atk: 0,
+      def: 0,
+      sp_def: 0,
+      speed: 0,
+      types: [],
+      isLegendary: false,
+      sprite: "",
+      color: "",
+    }]
+  );
 
-    const pokemonApiToPokemon = (pokemonApi: PokemonApi[]) => {
-        pokemonApi.map((pokemonApi: PokemonApi) => { 
-            let pokemon: Pokemon = {
-                id: 0,
-                name: '',
-                generation: 0,
-                abilities: [],
-                exp: 0,
-                hp: 0,
-                atk: 0,
-                sp_atk: 0,
-                def: 0,
-                sp_def: 0,
-                speed: 0,
-                types: [],
-                isLegendaryOrMytical: false,
-                sprite: ''
-            };
+  const getPokemons = (pokemons: string[]) => {
+    pokemons.map((pokemon_name: string) => {
+      let pokemon: Pokemon = {
+        id: 0,
+        pokedex_id: 0,
+        name: "",
+        generation: "",
+        abilities: [],
+        exp: 0,
+        hp: 0,
+        atk: 0,
+        sp_atk: 0,
+        def: 0,
+        sp_def: 0,
+        speed: 0,
+        types: [],
+        isLegendary: false,
+        sprite: "",
+        color: "",
+      };
 
-            pokemon.id = pokemonApi.id;
-            pokemon.name = pokemonApi.name;
-            pokemon.generation = 0;
+      getPokemonByName(pokemon_name)
+        .then(response => {
+          pokemon = response;
+        })
+      getComplementaryPokemonDataByName(pokemon)
+        .then(response => {
+          setPokemonList([...pokemonList, response]);
+        })
+    });    
+  }
 
-            for(let i = 0; i < pokemonApi.abilities.length; i++) {
-                pokemon.abilities[i].name = pokemonApi.abilities[i].ability.name
-                pokemon.abilities[i].is_hidden = pokemonApi.abilities[i].isHidden;
-            }
+  useEffect(() => {
+    getAllPokemons(20, 20)
+    .then(response => {
+      getPokemons(response);
+    })
+  }); */
 
-            pokemon.exp = pokemonApi.baseExperience;
-            pokemonApi.stats.map((stat: Stat) => {
-                switch(stat.stat.name) {
-                    case "hp":
-                        pokemon.hp = stat.baseStat;
-                        break;
-                    case "attack":
-                        pokemon.atk = stat.baseStat;
-                        break;
-                    case "defense":
-                        pokemon.def = stat.baseStat;
-                        break;
-                    case "special-attack":
-                        pokemon.sp_atk = stat.baseStat;
-                        break;
-                    case "special-defense":
-                        pokemon.sp_def = stat.baseStat;
-                        break;
-                    case "speed":
-                        pokemon.speed = stat.baseStat;
-                        break;
-                }
-            });
-
-            pokemonApi.types.map((type: TypeApi) => {
-                let tipo: Type = {
-                    name: type.type.name,
-                }
-                
-                pokemon.types.push(tipo);
-            });
-
-            pokemon.isLegendaryOrMytical = false;
-
-            pokemon.sprite = pokemonApi.sprites.frontDefault;
-
-            setPokemonState((currentValue) => [...currentValue, pokemon])
-        });
-    }
-
-    useEffect(() => {
-        pokemon_api.get("/pokemon")
-        .then((response) => {
-            return response.data;
-        }).then((data: PokemonApi[]) => {
-            pokemonApiToPokemon(data)
-        });
-    }, []);
-
-    return (
-        <section>
-            {pokemonState.map((pokemon: Pokemon) => (
-                <PokemonCard/>
-            ))}
-        </section>
-    );
+  return (
+      <section>
+      <PokemonCardComponent
+        id={10}
+        pokedex_id= {3}
+        name= {"teste"}
+        generation= {"3"}
+        abilities={[{ name: "teste", is_hidden: false }, { name: "teste", is_hidden: false }]}
+        exp= {3}
+        hp= {123}
+        atk= {123}
+        sp_atk= {123}
+        def= {123}
+        sp_def= {123}
+        speed= {123}
+        types={[{name: "teste"}, {name:"teste"}]}
+        isLegendary= {false}
+        sprite={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"}
+        color= {"gray"}
+      />
+      </section>
+  );
 };

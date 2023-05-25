@@ -1,22 +1,18 @@
-import usePokedexContext from "../../hooks/usePokedexContext";
 import styles from "./index.module.css";
 import Pokemon from "../../models/pokemon";
-import { Type } from "../../models/type";
+import { StatusComponent } from "../StatusComponent";
 
-type PokemonCardComponentProps = {
-	name: string;
-	atk: number;
-	def: number;
-	types: Type[];
-	sprite: string;
-}
-
-export const PokemonCardComponent = (pokemon: PokemonCardComponentProps) => {
-  /* const { pokemonState, setPokemonState } = usePokedexContext(); */
-
+export const PokemonCardComponent = (pokemon: Pokemon) => {
 	return (
-		<article>
-			
+		<article className={styles.card}>
+			<div className={styles.col_left}>
+				<h3 className={styles.name}>{pokemon.name}</h3>
+				<div className={styles.stats}>
+					<StatusComponent stat_name="Attack" stat={pokemon.atk} />
+					<StatusComponent stat_name="Defense" stat={pokemon.def} />
+				</div>
+			</div>
+			<img src={pokemon.sprite} alt={pokemon.name} className={styles.img}/>
 		</article>
 	)
 };

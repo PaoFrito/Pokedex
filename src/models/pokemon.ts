@@ -3,8 +3,9 @@ import { Type } from "./type";
 
 type Pokemon = {
   id: number;
+  pokedex_id: number;
   name: string;
-  generation: number;
+  generation: string;
   abilities: Ability[];
   exp: number;
   hp: number;
@@ -14,8 +15,9 @@ type Pokemon = {
   sp_def: number;
   speed: number;
   types: Type[];
-  isLegendaryOrMytical: boolean;
+  isLegendary: boolean;
   sprite: string;
+  color: string
 };
 
 export default Pokemon;

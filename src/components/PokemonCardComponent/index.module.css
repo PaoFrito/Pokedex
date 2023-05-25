@@ -1,0 +1,38 @@
+.card{
+  height: 140px;
+  width: var(--col_4);
+  background: linear-gradient(90deg, var(--white) 33%, rgb(242, 7, 7) 33%);
+  border-radius: 10px;
+  padding: 0px 24px 0px 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.col_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.name{
+  font-family: Karla;
+  font-size: 24px;
+  font-style: 700;
+  margin-bottom: 12px;
+}
+
+.stats{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.img{
+  height: auto;
+  width: 160px;
+}
+

@@ -14,10 +14,10 @@ export const MenuModal = () => {
           <img src={logo} alt="logo" className={styles.logo}/>
         </Link>
         <nav className={styles.nav}>
-          <Link className={styles.menu_item} to="/a">Home</Link>
-          <Link className={styles.menu_item} to="/">Pokedex</Link>
-          <Link className={styles.menu_item} to="/">Legendaries</Link>
-          <Link className={styles.menu_item} to="/">Documentation</Link>
+          <Link className={styles.menu_item} to="/">Home</Link>
+          <Link className={styles.menu_item} to="/pokedex">Pokedex</Link>
+          <Link className={styles.menu_item} to="/legendaries">Legendaries</Link>
+          <Link className={styles.menu_item} to="/https://pokeapi.co/docs/v2">Documentation</Link>
         </nav>
       </div>
     </div>

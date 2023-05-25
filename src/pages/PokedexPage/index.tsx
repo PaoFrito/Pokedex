@@ -1,12 +1,13 @@
 import { FooterComponent } from "../../components/FooterComponent";
 import { HeaderComponent } from "../../components/HeaderComponent";
+import { PokedexComponent } from "../../components/PokedexComponent";
 
-export const PokedexPage = () => {
-
+export const PokedexPage = () => {  
   return (
     <>
-      <HeaderComponent />
-      <FooterComponent />
+      <HeaderComponent/>
+        <PokedexComponent/>      
+      <FooterComponent/>
     </>
   );
 };

@@ -1,20 +1,23 @@
 import { Ability } from "./ability";
-import { Stats } from "./stats";
 import { Type } from "./type";
 
-export type Pokemon = {
-  id: string;
+type Pokemon = {
+  id: number;
+  pokedex_id: number;
   name: string;
-  generation: number;
-  abilities: Ability;
+  generation: string;
+  abilities: Ability[];
   exp: number;
-  hp: Stats;
-  atk: Stats;
-  sp_atk: Stats;
-  def: Stats;
-  sp_def: Stats;
-  speed: Stats;
+  hp: number;
+  atk: number;
+  sp_atk: number;
+  def: number;
+  sp_def: number;
+  speed: number;
   types: Type[];
-  isLegendaryOrMytical: boolean;
+  isLegendary: boolean;
   sprite: string;
+  color: string
 };
+
+export default Pokemon;

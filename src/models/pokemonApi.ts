@@ -15,7 +15,7 @@ type PokemonApi = {
   species: Species;
   sprites: Sprites;
   stats: Stat[];
-  types: Type[];
+  types: TypeApi[];
   pastTypes: PastType[];
 };
 
@@ -58,10 +58,10 @@ type VersionGroupDetail = {
 
 type PastType = {
   generation: Species;
-  types: Type[];
+  types: TypeApi[];
 };
 
-type Type = {
+type TypeApi = {
   slot: number;
   type: Species;
 };
@@ -175,3 +175,4 @@ type Stat = {
 };
 
 export default PokemonApi; 
+export type { Stat, TypeApi };

@@ -69,6 +69,8 @@
 @media (max-width: 768px) {
     .header_background{
         height: 55px;
+        z-index: 100;
+        position: relative;
     }
     
     .header{

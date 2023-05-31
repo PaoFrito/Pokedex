@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 import { PokemonCardComponent } from '../PokemonCardComponent';
-import Container from '../Container/index';
+import Container from '../Container';
 
 export const PokedexComponent = () => {
 

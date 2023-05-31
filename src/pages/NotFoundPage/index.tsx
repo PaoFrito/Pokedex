@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import { Button } from "../../components/Buttons";
 import team_rocket_404 from "../../assets/team_rocket_404.png";
-import { Container } from "../../components/Container";
+import Container from "../../components/Container";
 
 export const ErrorPage = () => {
 

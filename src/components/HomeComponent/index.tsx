@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import banner from '../../assets/Banner.png';
+import banner from '../../assets/banner.png';
 import { Container } from '../Container';
 import { Button } from '../Buttons';
 

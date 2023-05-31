@@ -1,9 +1,6 @@
 import axios from "axios";
-import Pokemon from "../models/pokemon";
-import { Pokedex, Result } from "../models/pokedex";
-import { Type } from "../models/type";
 
-const pokemon_api = axios.create({
+export const pokemon_api = axios.create({
   baseURL: "https://pokeapi.co/api/v2",
 });
 

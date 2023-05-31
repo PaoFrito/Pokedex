@@ -1,5 +1,6 @@
 import styles from './index.module.css';
 import { PokemonCardComponent } from '../PokemonCardComponent';
+import Container from '../Container/index';
 
 export const PokedexComponent = () => {
 
@@ -64,7 +65,8 @@ export const PokedexComponent = () => {
   }); */
 
   return (
-    <section className={styles.section}>
+    <Container>
+      <section className={styles.section}>
         <PokemonCardComponent
           id={10}
           pokedex_id= {3}
@@ -84,5 +86,6 @@ export const PokedexComponent = () => {
           color= {"gray"}
         />
       </section>
+    </Container>
   );
 };

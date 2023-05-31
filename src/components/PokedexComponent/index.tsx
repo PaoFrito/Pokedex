@@ -1,7 +1,3 @@
-import { useEffect, useState } from 'react';
-import { getAllPokemons, getPokemonByName, getComplementaryPokemonDataByName } from '../../api/pokemon';
-import Pokemon from '../../models/pokemon';
-import { PokemonCardContextProvider } from '../../contexts/pokemonCard';
 import { PokemonCardComponent } from '../PokemonCardComponent';
 
 export const PokedexComponent = () => {

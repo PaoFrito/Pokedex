@@ -1,3 +1,4 @@
+import styles from './index.module.css';
 import { PokemonCardComponent } from '../PokemonCardComponent';
 
 export const PokedexComponent = () => {
@@ -63,25 +64,25 @@ export const PokedexComponent = () => {
   }); */
 
   return (
-      <section>
-      <PokemonCardComponent
-        id={10}
-        pokedex_id= {3}
-        name= {"teste"}
-        generation= {"3"}
-        abilities={[{ name: "teste", is_hidden: false }, { name: "teste", is_hidden: false }]}
-        exp= {3}
-        hp= {123}
-        atk= {123}
-        sp_atk= {123}
-        def= {123}
-        sp_def= {123}
-        speed= {123}
-        types={[{name: "teste"}, {name:"teste"}]}
-        isLegendary= {false}
-        sprite={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"}
-        color= {"gray"}
-      />
+    <section className={styles.section}>
+        <PokemonCardComponent
+          id={10}
+          pokedex_id= {3}
+          name= {"teste"}
+          generation= {"3"}
+          abilities={[{ name: "teste", is_hidden: false }, { name: "teste", is_hidden: false }]}
+          exp= {3}
+          hp= {123}
+          atk= {123}
+          sp_atk= {123}
+          def= {123}
+          sp_def= {123}
+          speed= {123}
+          types={[{name: "teste"}, {name:"teste"}]}
+          isLegendary= {false}
+          sprite={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"}
+          color= {"gray"}
+        />
       </section>
   );
 };

@@ -1,5 +1,5 @@
 import logo from "../../../assets/logo.svg";
-import { Container } from "../../Container";
+import Container from "../../Container";
 import styles from "./index.module.css";
 import { AiOutlineMenu } from "react-icons/ai"
 import { MenuModal } from "../MenuModal";

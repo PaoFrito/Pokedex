@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 import banner from '../../assets/banner.png';
-import { Container } from '../Container';
+import Container from '../Container';
 import { Button } from '../Buttons';
 
 export const HomeComponent = () => {
